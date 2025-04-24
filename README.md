@@ -22,19 +22,7 @@
 - **Frontend**: Streamlit
 - **RAG Framework**: LangChain
 - **Embeddings**: OpenAI Embeddings
-- **LLM Backend**: GPT-3.5 (via OpenAI API), Ollama (optional)
+- **LLM Backend**: GPT-3.5 (via OpenAI API), Ollama:2b
 - **Vector Store**: ChromaDB with disk persistence
 - **Document Parsing**: LangChain PyPDFLoader
 
-
-### Prerequisites
-
-- Python 3.8+
-- OpenAI API Key
-- Streamlit Cloud account
-
-### Clone the Repository
-
-```bash
-git clone https://github.com/yourusername/rag-knowledge-assistant.git
-cd rag-knowledge-assistant
