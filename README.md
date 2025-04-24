@@ -1,2 +1,40 @@
-# RAG-Knowledge-Assistant
-RAG Knowledge Assistant is a document-aware chatbot built using Retrieval-Augmented Generation (RAG). It allows users to upload internal company documents (e.g., handbooks, policies, manuals), ask questions, and receive accurate, source-cited answers from a large language model.
+# RAG Knowledge Assistant
+
+## Overview
+
+**RAG Knowledge Assistant** is a document-aware chatbot built using Retrieval-Augmented Generation (RAG). It enables users to upload internal company documents (PDFs) and ask natural language questions, receiving accurate, context-based answers powered by large language models. This assistant is designed to simulate a real-world internal support tool for HR, onboarding, policy reference, or customer-facing document Q&A.
+
+## Features
+
+- Upload and process internal documents (PDF)
+- Embed documents using OpenAIEmbeddings
+- Store vectors persistently using ChromaDB
+- Retrieve top-k document chunks via semantic search
+- Answer questions using GPT-3.5-turbo or LLaMA
+- Maintain conversational context using memory buffers
+- Display source documents supporting the response
+- Log and review all user interactions and answers
+- Deployable on Streamlit Cloud with zero setup
+
+
+## Tech Stack
+
+- **Frontend**: Streamlit
+- **RAG Framework**: LangChain
+- **Embeddings**: OpenAI Embeddings
+- **LLM Backend**: GPT-3.5 (via OpenAI API), Ollama (optional)
+- **Vector Store**: ChromaDB with disk persistence
+- **Document Parsing**: LangChain PyPDFLoader
+
+
+### Prerequisites
+
+- Python 3.8+
+- OpenAI API Key
+- Streamlit Cloud account
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/rag-knowledge-assistant.git
+cd rag-knowledge-assistant
