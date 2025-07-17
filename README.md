@@ -1,28 +1,36 @@
 # RAG Knowledge Assistant
 
-## Overview
-
-**RAG Knowledge Assistant** is a document-aware chatbot built using Retrieval-Augmented Generation (RAG). It enables users to upload internal company documents (PDFs) and ask natural language questions, receiving accurate, context-based answers powered by large language models. This assistant is designed to simulate a real-world internal support tool for HR, onboarding, policy reference, or customer-facing document Q&A.
+The RAG Knowledge Assistant is a Retrieval-Augmented Generation (RAG) web application built using Streamlit for the user interface, LangChain for the RAG pipeline, and ChromaDB as the vector store. It supports dynamic switching between OpenAI, Ollama, and HuggingFace for both language model and embedding providers. It also includes source tracking for document-based answers.
 
 ## Features
 
-- Upload and process internal documents (PDF)
-- Embed documents using OpenAIEmbeddings
-- Store vectors persistently using ChromaDB
-- Retrieve top-k document chunks via semantic search
-- Answer questions using GPT-3.5-turbo or LLaMA
-- Maintain conversational context using memory buffers
-- Display source documents supporting the response
-- Log and review all user interactions and answers
-- Deployable on Streamlit Cloud with zero setup
+- Document Upload: Upload PDF and TXT files to build your knowledge base.
+- Semantic Search: Performs semantic search over your documents to retrieve relevant information.
+- Conversational Interactions: Engage in multi-turn conversations about your uploaded documents.
+- Dynamic LLM Backend Switching:
+  - OpenAI: Uses OpenAI's chat models and embeddings (requires API key).
+  - Ollama: Runs local Ollama models like LLaMA2 or Mistral.
+  - HuggingFace: Uses local embedding models like `all-MiniLM-L6-v2`.
+- Source Tracking: Displays specific document chunks and their sources (file name, page number) that contributed to the assistant's response.
 
+## Technologies Used
 
-## Tech Stack
+- Streamlit – For creating the interactive web application
+- LangChain – For building the RAG pipeline (loading, splitting, retrieval, memory)
+- ChromaDB – For storing document embeddings in-memory
+- OpenAI – For language models and embedding services (API-based)
+- Ollama – For running local open-source LLMs
+- HuggingFace – For local embedding model support
+- PyPDF – For loading PDF documents
 
-- **Frontend**: Streamlit
-- **RAG Framework**: LangChain
-- **Embeddings**: OpenAI Embeddings
-- **LLM Backend**: GPT-3.5 (via OpenAI API), Ollama:2b
-- **Vector Store**: ChromaDB with disk persistence
-- **Document Parsing**: LangChain PyPDFLoader
+## To run
+Install the depenedecies in venv
+```bash
+pip install streamlit langchain langchain-community pypdf openai chromadb
+```
+Set your OpenAI API key if you want to use ChatGPT, or ensure Ollama is installed and running if you prefer to use a local LLM like Llama.
 
+Start the application:
+```bash
+streamlit run app.py
+```
