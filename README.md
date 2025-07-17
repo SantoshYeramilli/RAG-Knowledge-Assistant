@@ -1,6 +1,6 @@
 # RAG Knowledge Assistant
 
-The RAG Knowledge Assistant is a Retrieval-Augmented Generation (RAG) web application built using Streamlit for the user interface, LangChain for the RAG pipeline, and ChromaDB as the vector store. It supports dynamic switching between OpenAI, Ollama, and HuggingFace for both language model and embedding providers. It also includes source tracking for document-based answers.
+The RAG Knowledge Assistant is a Retrieval-Augmented Generation (RAG) web application built using Streamlit for the user interface, LangChain for the RAG pipeline, and ChromaDB as the vector store. It supports dynamic switching between OpenAI and Ollama for both language model and embedding providers. It also includes source tracking for document-based answers.
 
 ## Features
 
@@ -10,7 +10,6 @@ The RAG Knowledge Assistant is a Retrieval-Augmented Generation (RAG) web applic
 - Dynamic LLM Backend Switching:
   - OpenAI: Uses OpenAI's chat models and embeddings (requires API key).
   - Ollama: Runs local Ollama models like LLaMA2 or Mistral.
-  - HuggingFace: Uses local embedding models like `all-MiniLM-L6-v2`.
 - Source Tracking: Displays specific document chunks and their sources (file name, page number) that contributed to the assistant's response.
 
 ## Technologies Used
@@ -20,7 +19,6 @@ The RAG Knowledge Assistant is a Retrieval-Augmented Generation (RAG) web applic
 - ChromaDB – For storing document embeddings in-memory
 - OpenAI – For language models and embedding services (API-based)
 - Ollama – For running local open-source LLMs
-- HuggingFace – For local embedding model support
 - PyPDF – For loading PDF documents
 
 ## To run
